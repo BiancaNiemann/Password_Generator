@@ -4,7 +4,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let passwordOne = document.getElementById('password-one')
 let passwordTwo = document.getElementById('password-two')
 
-function generator() {
+function generator(event) {
             
     let characterNum = document.getElementById('amount').value
 
@@ -19,24 +19,17 @@ function generator() {
     let random2 = Math.floor(Math.random() * characters.length) 
     passwordTwo.textContent += characters[random2] 
     } 
+    
+    event.preventDefault()
 }
 
 function copyOne() {
-    var inp = document.createElement('input');
-    document.body.appendChild(inp)
-    inp.value = passwordOne.textContent
-    inp.select();
-    document.execCommand('copy');
-    inp.remove()
+    navigator.clipboard.writeText(passwordOne.textContent)
 }
 
 function copyTwo() {
-    var inp = document.createElement('input');
-    document.body.appendChild(inp)
-    inp.value = passwordTwo.textContent
-    inp.select();
-    document.execCommand('copy');
-    inp.remove()
+    navigator.clipboard.writeText(passwordTwo.textContent)
 }
+
 
 

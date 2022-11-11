@@ -6,6 +6,11 @@ body {
     padding-left: 80px;
 }
 
+.random-box {
+    width: 420px;
+    margin: auto;
+}
+
 .heading {
     color: #FFFFFF;
     font-size: 40px;
@@ -36,11 +41,11 @@ p {
 }
 
 #amount {
-    width: 28px;
+    width: 32px;
     margin-left: 10px;
     margin-top: 12px;
     padding-left:5px; 
-    height: 28px;
+    height: 24px;
     background-color: #D5D4D8;
     border: none;
     border-radius: 6px; 
@@ -56,6 +61,7 @@ p {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 hr {
@@ -68,18 +74,20 @@ hr {
 .password-box {
     display: flex;
     flex-wrap: wrap;
-    max-width: 400px
 }
 
 #password-one, #password-two {
     background-color: #273549;
     width: 180px;
-    height: 30px;
+    height: fit-content;
+    padding: 20px;
     border-radius: 6px;
     color: #55F991;
     text-align: center;
-    padding-top: 10px;
     margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 .copy {
@@ -93,5 +101,8 @@ hr {
     color: #10B981;
     font-weight: 600;
     text-shadow: 0px 0px black;
+    cursor: pointer;
 }
+
+
 
